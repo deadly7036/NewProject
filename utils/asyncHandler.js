@@ -10,7 +10,7 @@ const asyncHandler = (requestHandler) => {
 export {asyncHandler}
 
 
-const asyncHa = (fn) => async(req,res,next) => {
+/*const asyncHa = (fn) => async(req,res,next) => {
   try {
     await fn(req,res,next)
   } catch (err) {
@@ -19,4 +19,4 @@ const asyncHa = (fn) => async(req,res,next) => {
       message: err.message
     })
   }
-}
+}*/
