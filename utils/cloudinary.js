@@ -8,7 +8,7 @@ cloudinary.config({
 
 
 
-const uploadImage = async (localFilePath) => {
+const uploadOnCloudinary = async (localFilePath) => {
    try {
 if(!localFilePath) return null
   const resp = await cloudinary.uploader.upload(localFilePath,{
@@ -18,10 +18,11 @@ if(!localFilePath) return null
      return resp
    }catch(error) {
      fs.unlinkSync(localFilePath)
+     return null
    }
 }
 
 
 
 
-export {uploadImage}
+export {uploadOnCloudinary}
